@@ -219,46 +219,6 @@ namespace project {
 				}
 			}
 
-			/*
-			printf("\n\n\n Pi----------\n\n");
-			for(k = 0 ; k < 20 ; k++)
-			{
-				printf("\n");
-				for(i = 0 ; i < N ; i++)
-				{
-					printf("%g  ",Pi[k][i]);
-				}
-			}
-
-
-			printf("\n\n\n A----------\n\n");
-			for(k = 0 ; k < 20 ; k++)
-			{
-				printf("\n\n\n");
-				for(i = 0 ; i < N ; i++)
-				{
-					printf("\n");
-					for(j = 0 ; j < N ; j++)
-					{
-						printf("%g  ",A[k][i][j]);
-					}
-				}
-			}
-
-			printf("\n\n\n B----------\n\n");
-			for(k = 0 ; k < 20 ; k++)
-			{
-				printf("\n\n\n");
-				for(i = 0 ; i < N ; i++)
-				{
-					printf("\n\n");
-					for(j = 0 ; j < M ; j++)
-					{
-						printf("%g  ",B[k][i][j]);
-					}
-				}
-			}
-			*/
 
 			//---------------------------------------------------------------------
 
@@ -338,14 +298,7 @@ namespace project {
 						}
 					}
 
-					/*
-					printf("\n Ri-  %d  -%d ****--------\n",ut+1, k);
-					for(int i = 0 ; i < 13 ; i++)
-					{
-						printf("%lf\n",R[i]);
-					}
-					*/
-	
+					
 					//calculating A[i]
 
 					E[0] = R[0];
@@ -372,14 +325,6 @@ namespace project {
 						A_i[i] = a[12][i] ;
 					}
 
-					/*
-					printf("\n Ai-  %d  -%d ****--------\n",ut+1 , k);
-					for(int i = 1 ; i < 13 ; i++)
-					{
-						printf("%lf\n",A_i[i]);
-					}
-					*/
-
 					//calculating C[i]
 
 					sigma = R[0];
@@ -395,13 +340,6 @@ namespace project {
 						C[m] = A_i[m] + sum;
 					}
 
-					/*
-					printf("\n Ci-  %d  -%d ****--------\n" ,ut+1 , k);
-					for(int i = 1 ; i < 13 ; i++)
-					{
-						printf("%lf\n",C[i]);
-					}
-					*/
 
 					//apply raised sine window on Ci
 					for(int i = 1 ; i < 13 ; i++)
@@ -504,18 +442,7 @@ namespace project {
 						}
 					}
 
-					/*
-					printf("Beta matrix \n");
-					for(t = 1 ; t <= T ; t++)
-					{
-						printf("\n");
-						for(i = 0 ; i < N ; i++)
-						{
-							printf("%g ",beta[t][i]);
-						}
-					}
-					*/
-	
+					
 
 					//solution to problem 2 
 					//viterbi algorithm
@@ -568,16 +495,7 @@ namespace project {
 						qt_star[t] = psi[t+1][qt_star[t+1]] ;
 					}
 
-					/*
-					printf("\nP_* = %g\n", p_star);
-					printf("\nState sequance is :- \n\n");
-
-					for(t = 1 ; t <= T ; t++)
-					{
-						printf("%d ",qt_star[t] + 1);
-					}
-					*/
-
+					
 					//Xi and gama initialization
 					for(t = 1 ; t <= T ; t++)
 					{
@@ -735,7 +653,7 @@ namespace project {
 			}
 
 
-			//printf("\n\n\n\n");
+			
 			//avarage model------------------------
 			//printf("Final Converged Lembda--------------");
 			//Pi---------------------
@@ -945,13 +863,7 @@ namespace project {
 				}
 			}
 
-			/*
-			printf("\n Ri-  %d  -%d ****--------\n",ut+1, k);
-			for(int i = 0 ; i < 13 ; i++)
-			{
-				printf("%lf\n",R[i]);
-			}
-			*/
+			
 	
 			//calculating A[i]
 
@@ -979,14 +891,7 @@ namespace project {
 				A_i[i] = a[12][i] ;
 			}
 
-			/*
-			printf("\n Ai-  %d  -%d ****--------\n",ut+1 , k);
-			for(int i = 1 ; i < 13 ; i++)
-			{
-				printf("%lf\n",A_i[i]);
-			}
-			*/
-
+			
 			//calculating C[i]
 
 			sigma = R[0];
@@ -1002,13 +907,6 @@ namespace project {
 				C[m] = A_i[m] + sum;
 			}
 
-			/*
-			printf("\n Ci-  %d  -%d ****--------\n" ,ut+1 , k);
-			for(int i = 1 ; i < 13 ; i++)
-			{
-				printf("%lf\n",C[i]);
-			}
-			*/
 
 			//apply raised sine window on Ci
 			for(int i = 1 ; i < 13 ; i++)
@@ -1042,16 +940,7 @@ namespace project {
 		fclose(myFile);         // closing file
 		
 		
-		/*
-		printf("\n\nTest Observation Sequence ---------------------\n\n");
-		for(t = 1 ; t <= T ; t++)
-		{
-			printf("%d " , O[t]);
-		}
-			
-		printf("\n\n");
-		*/
-
+		
 		temp_max = -99999999;
 		temp_digit = -1;
 		for(k = 0 ; k < 10 ; k++)
