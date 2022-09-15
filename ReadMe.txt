@@ -3,8 +3,8 @@
 ========================================================================
 
 First Make sure their exist file/folder name------
-Testing (folder)
-Training (folder)
+Testing (zip) // extract folder
+Training (zip) // extract folder
 codebook.txt (file)
 Form1.h (file)
 AssemblyInfo.cpp (file)
